@@ -7,13 +7,13 @@ def setsession(request):
     return render(request,'student/setsession.html')
 
 
+
 def getsession(request):
     name=request.session['name']
     keys=request.session.keys()
-
-    return render(request,'student/getsession.html',{'name':name,'keys':keys})
+    items=request.session.items()
+    return render(request,'student/getsession.html',{'name':name,'keys':keys,'items':items,'age':'age'})
   
 def delsession(request):
-    if 'name' in request.session:
-        del request.session['name']
+    request.session.flush()
     return render(request,'student/delsession.html')
