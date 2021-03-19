@@ -1,4 +1,4 @@
-"""gs9 URL Configuration
+"""gs10 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -18,8 +18,5 @@ from django.urls import path
 from school import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-#     path('',views.TemplateView.as_view(template_name='school/home.html'),name='home'),
-#     path('index/',views.TemplateView.as_view(template_name='school/home.html'),name='index'),
-#
-  path('home/',views.hometemplate.as_view(),name='home'),
+    path('',views.TemplateView.as_view(template_name='schoool/home.html')),
 ]
