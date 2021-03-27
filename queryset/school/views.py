@@ -10,5 +10,5 @@ def home(request):
   # students_data=student.objects.order_by('?') randomly
   # students_data=student.objects.order_by('id').reverse()[0:5]
    #students_data=student.objects.values('name','city')
- #  students_data=student.objects.values('name','city')  gives us dictionary
+ ##  students_data=student.objects.values('name','city')  gives us dictionary
    return render(request,'school/home.html',{'stus':students_data})
